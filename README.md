@@ -17,7 +17,7 @@ where `%PluginPath%` is the directory you put the file.
 For example, if you had the plugin located at `C:\Mod Debugger\ModDebugger.dll`, then you would make a shortcut with target of:
         `"C:\Program Files (x86)\Steam\steamapps\common\SpaceEngineers\Bin64_Profile\SpaceEngineers.exe" -plugin "C:\ModDebugger\ModDebugger.dll"`
 
-Once loaded, you will now be able to make calls to System.Diagnostics.Debugger from inside mods and scripts. Included is a `ModDebugger.cs` file which provides a wrapper class that you can safely call with or without the plugin loaded. When the plugin is not loaded, **all** the wrapper methods of ModDebugger do nothing (return false, or an empty string).
+Once loaded, you will now be able to make calls to System.Diagnostics.Debugger from inside mods and scripts. Included is a `SEDebugger.cs` file which provides a wrapper class that you can safely call with or without the plugin loaded. When the plugin is not loaded, **all** the wrapper methods of ModDebugger do nothing (return false, or an empty string).
 
 To start debugging, from inside your mod at some point call `SEDebugger.Launch()` - this will cause Space Engineers to launch the Just-In-Time Debugger screen. From there you can choose to launch a new instance of Visual Studio or attach to an existing one. You can then call `SEDebugger.Break()` whenever you want to pause the game and inspect things. Also, once attached, debugger should auto-break on exceptions.
 
