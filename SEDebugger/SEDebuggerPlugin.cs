@@ -16,8 +16,7 @@ namespace SEDebugger
         {
             var assemblyLocation = Assembly.GetExecutingAssembly().Location;
             var assemblyFolder = Path.GetDirectoryName(assemblyLocation);
-            var _basePath = Path.Combine(assemblyFolder, "TempFiles");
-            MySandboxGame.Log.WriteLine("Assembly basepath: " + _basePath);
+            MySandboxGame.Log.WriteLine("Assembly basepath: " + assemblyFolder);
         }
 
         public void Dispose()
